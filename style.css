@@ -129,3 +129,32 @@ svg {
 
     stroke-width: 3;
 }
+
+.neuron {
+    fill: #111;
+    stroke: white;
+    stroke-width: 3;
+}
+
+.neuron-text {
+    fill: white;
+    font-size: 25px;
+    text-anchor: middle;
+}
+
+.connection {
+    stroke: #555;
+    stroke-width: 2;
+}
+
+.weight-label {
+    fill: #ffffff;
+    font-size: 17px;
+    text-anchor: middle;
+}
+
+.bias-label {
+    fill: #ffffff;
+    font-size: 14px;
+    text-anchor: middle;
+}
