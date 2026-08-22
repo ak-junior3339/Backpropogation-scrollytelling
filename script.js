@@ -15,11 +15,11 @@ gsap.from(".neuron", {
 
     stagger: 0.15,
 
-    duration: 0.6,
+    duration: 0.9,
 
     scrollTrigger: {
 
-        trigger: ".step",
+        trigger: ".experience",
 
         start: "top 60%",
 
@@ -40,11 +40,11 @@ gsap.from(".connection", {
 
     stagger: 0.1,
 
-    duration: 0.5,
+    duration: 0.7,
 
     scrollTrigger: {
 
-        trigger: ".step",
+        trigger: ".experience",
 
         start: "top 60%",
 
@@ -52,18 +52,4 @@ gsap.from(".connection", {
 
     }
 
-});
-
-
-// Adding snap
-ScrollTrigger.create({
-    snap: {
-        snapTo: (progress) => {
-            return Math.round(progress * 2) / 2;
-        },
-
-        duration: 0.5,
-
-        ease: "power2.inOut"
-    }
 });
