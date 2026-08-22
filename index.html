@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Backpropagation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- INTRODUCTION -->
+    <section class="intro">
+
+        <h1>Backpropagation</h1>
+
+        <p>
+            Backpropagation is a machine learning technique essential to the optimization of artificial neural networks. 
+        </p>
+        <p>
+            It facilitates the use of gradient descent algorithms to update network weights which is how 
+        </p>
+        <p>
+           the deep learning models driving modern artificial intelligence (AI) “learn”.
+        </p>
+        <p id="scrollinfo">
+            Please Scroll Down ↓
+        </p>
+
+    </section>
+
+
+    <!-- PAGE-1 -->
+    <section class="step">
+
+        <div class="text">
+
+            <h2>
+                Step 1 — Forward Propagation
+            </h2>
+
+            <p>
+                Information starts at the input layer
+                and moves through the neural network
+                toward the output layer.
+            </p>
+
+        </div>
+
+
+        <!-- RIGHT SIDE -->
+
+        <div class="network">
+
+            <svg viewBox="0 0 500 400">
+
+                <!-- CONNECTIONS -->
+
+                <line class="connection"
+                      x1="100" y1="100"
+                      x2="250" y2="150"/>
+
+                <line class="connection"
+                      x1="100" y1="200"
+                      x2="250" y2="150"/>
+
+                <line class="connection"
+                      x1="100" y1="200"
+                      x2="250" y2="250"/>
+
+                <line class="connection"
+                      x1="100" y1="300"
+                      x2="250" y2="250"/>
+
+
+                <line class="connection"
+                      x1="250" y1="150"
+                      x2="400" y2="200"/>
+
+                <line class="connection"
+                      x1="250" y1="250"
+                      x2="400" y2="200"/>
+
+
+                <!-- INPUT LAYER -->
+
+                <circle class="neuron"
+                        cx="100"
+                        cy="100"
+                        r="25"/>
+
+                <circle class="neuron"
+                        cx="100"
+                        cy="200"
+                        r="25"/>
+
+                <circle class="neuron"
+                        cx="100"
+                        cy="300"
+                        r="25"/>
+
+
+                <!-- HIDDEN LAYER -->
+
+                <circle class="neuron"
+                        cx="250"
+                        cy="150"
+                        r="25"/>
+
+                <circle class="neuron"
+                        cx="250"
+                        cy="250"
+                        r="25"/>
+
+
+                <!-- OUTPUT -->
+
+                <circle class="neuron"
+                        cx="400"
+                        cy="200"
+                        r="25"/>
+
+            </svg>
+
+        </div>
+
+    </section>
+
+
+    <!-- GSAP -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
