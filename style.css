@@ -175,3 +175,92 @@ body {
     }
 
 }
+.activation-visual {
+    opacity: 0;
+}
+
+
+.activation-value {
+    fill: white;
+    font-size: 22px;
+    text-anchor: middle;
+}
+
+.activation-arrow {
+    stroke: white;
+    stroke-width: 2;
+}
+
+.activation-box {
+    fill: #111;
+    stroke: white;
+    stroke-width: 2;
+}
+
+.activation-text {
+    fill: white;
+    font-size: 20px;
+    text-anchor: middle;
+}
+
+
+.activation-value {
+    fill: white;
+    font-size: 24px;
+    text-anchor: middle;
+}
+
+.activation-box {
+    fill: #111;
+    stroke: white;
+    stroke-width: 3;
+}
+
+.activation-text {
+    fill: white;
+    font-size: 26px;
+    text-anchor: middle;
+}
+
+.activation-subtext {
+    fill: #aaa;
+    font-size: 16px;
+    text-anchor: middle;
+}
+
+.activation-arrow {
+    stroke: white;
+    stroke-width: 2;
+}
+.loss-visual {
+    opacity: 0;
+}
+
+.loss-value {
+    fill: white;
+    font-size: 24px;
+    text-anchor: middle;
+}
+
+.loss-box {
+    fill: #111;
+    stroke: white;
+    stroke-width: 3;
+}
+
+.loss-text {
+    fill: white;
+    font-size: 24px;
+    text-anchor: middle;
+}
+
+.loss-subtext {
+    fill: #aaa;
+    font-size: 16px;
+    text-anchor: middle;
+}
+
+.loss-arrow {
+    stroke: white;
+    stroke-width: 2;
+}
