@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #0f1115;
+
+    color: white;
+}
+
+
+/* ================= INTRO ================= */
+
+.intro {
+
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    margin-left: 50px;
+
+}
+
+
+.intro h1 {
+
+    font-size: 80px;
+
+    margin-bottom: 65px;
+}
+
+
+.intro p {
+
+    font-size: 28px;
+
+    color: #aaa;
+}
+
+#scrollinfo{
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* ================= STEP ================= */
+
+.step {
+
+    height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    padding: 60px;
+}
+
+
+/* LEFT TEXT */
+
+.text {
+
+    width: 40%;
+}
+
+
+.text h2 {
+
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+
+.text p {
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    color: #aaa;
+}
+
+
+/* RIGHT NETWORK */
+
+.network {
+
+    width: 45%;
+}
+
+
+svg {
+
+    width: 100%;
+
+    height: auto;
+}
+
+
+/* SVG CONNECTIONS */
+
+.connection {
+
+    stroke: #555;
+
+    stroke-width: 3;
+}
+
+
+/* SVG NEURONS */
+
+.neuron {
+
+    fill: #111;
+
+    stroke: white;
+
+    stroke-width: 3;
+}
