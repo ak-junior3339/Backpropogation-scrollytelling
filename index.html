@@ -39,96 +39,210 @@
         <div class="text">
 
             <h2>
-                Step 1 — Forward Propagation
+                Simple Neural Network
             </h2>
 
             <p>
-                Information starts at the input layer
-                and moves through the neural network
-                toward the output layer.
+                On the right hand of the screen you can see a simple neural network 
+                with a input layer having 2 nodes, 1 hidden layer having 2 nodes and 
+                an output layer having a single node.
+                Nodes in neighboring layers are connected with weights 𝑤𝑖𝑗.
+                There are total of 9 trainable parameters.
             </p>
 
         </div>
-
-
-        <!-- RIGHT SIDE -->
 
         <div class="network">
 
             <svg viewBox="0 0 500 400">
 
-                <!-- CONNECTIONS -->
+                <g class="weight-group w11">
 
-                <line class="connection"
-                      x1="100" y1="100"
-                      x2="250" y2="150"/>
+                    <line class="connection"
+                        x1="100" y1="100"
+                        x2="250" y2="150"/>
 
-                <line class="connection"
-                      x1="100" y1="200"
-                      x2="250" y2="150"/>
+                    <text class="weight-label"
+                        x="165"
+                        y="110">
+                        w⁽¹⁾₁₁
+                    </text>
 
-                <line class="connection"
-                      x1="100" y1="200"
-                      x2="250" y2="250"/>
+                </g>
 
-                <line class="connection"
-                      x1="100" y1="300"
-                      x2="250" y2="250"/>
+                <g class="weight-group w21">
+
+                    <line class="connection"
+                        x1="100" y1="100"
+                        x2="250" y2="250"/>
+
+                    <text class="weight-label"
+                        x="165"
+                        y="175">
+                        w⁽¹⁾₂₁
+                    </text>
+
+                </g>
+
+                <g class="weight-group w12">
+
+                    <line class="connection"
+                        x1="100" y1="300"
+                        x2="250" y2="150"/>
+
+                    <text class="weight-label"
+                        x="165"
+                        y="240">
+                        w⁽¹⁾₁₂
+                    </text>
+
+                </g>
+
+                <g class="weight-group w22">
+
+                    <line class="connection"
+                        x1="100" y1="300"
+                        x2="250" y2="250"/>
+
+                    <text class="weight-label"
+                        x="165"
+                        y="300">
+                        w⁽¹⁾₂₂
+                    </text>
+
+                </g>
+
+                <!-- z1 → output -->
+                <g class="weight-group w211">
+
+                    <line class="connection"
+                        x1="250" y1="150"
+                        x2="400" y2="200"/>
+
+                    <text class="weight-label"
+                        x="325"
+                        y="165">
+                        w⁽²⁾₁₁
+                    </text>
+
+                </g>
 
 
-                <line class="connection"
-                      x1="250" y1="150"
-                      x2="400" y2="200"/>
+                <!-- z2 → output -->
+                <g class="weight-group w212">
 
-                <line class="connection"
-                      x1="250" y1="250"
-                      x2="400" y2="200"/>
+                    <line class="connection"
+                        x1="250" y1="250"
+                        x2="400" y2="200"/>
 
+                    <text class="weight-label"
+                        x="325"
+                        y="250">
+                        w⁽²⁾₁₂
+                    </text>
 
-                <!-- INPUT LAYER -->
+                </g>
 
-                <circle class="neuron"
-                        cx="100"
-                        cy="100"
-                        r="25"/>
+                <g class="neuron-group input-neuron-1">
 
-                <circle class="neuron"
-                        cx="100"
-                        cy="200"
-                        r="25"/>
+                    <circle class="neuron"
+                            cx="100"
+                            cy="100"
+                            r="25"/>
 
-                <circle class="neuron"
-                        cx="100"
-                        cy="300"
-                        r="25"/>
+                    <text class="neuron-text"
+                        x="100"
+                        y="106">
+                        x₁
+                    </text>
 
-
-                <!-- HIDDEN LAYER -->
-
-                <circle class="neuron"
-                        cx="250"
-                        cy="150"
-                        r="25"/>
-
-                <circle class="neuron"
-                        cx="250"
-                        cy="250"
-                        r="25"/>
+                </g>
 
 
-                <!-- OUTPUT -->
+                <g class="neuron-group input-neuron-2">
 
-                <circle class="neuron"
-                        cx="400"
-                        cy="200"
-                        r="25"/>
+                    <circle class="neuron"
+                            cx="100"
+                            cy="300"
+                            r="25"/>
+
+                    <text class="neuron-text"
+                        x="100"
+                        y="306">
+                        x₂
+                    </text>
+
+                </g>
+
+                <g class="neuron-group hidden-neuron-1">
+
+                    <circle class="neuron"
+                            cx="250"
+                            cy="150"
+                            r="25"/>
+
+                    <text class="neuron-text"
+                        x="250"
+                        y="156">
+                        z₁
+                    </text>
+
+                    <text class="bias-label"
+                        x="250"
+                        y="105">
+                        b⁽¹⁾₁
+                    </text>
+
+                </g>
+
+
+                <g class="neuron-group hidden-neuron-2">
+
+                    <circle class="neuron"
+                            cx="250"
+                            cy="250"
+                            r="25"/>
+
+                    <text class="neuron-text"
+                        x="250"
+                        y="256">
+                        z₂
+                    </text>
+
+                    <text class="bias-label"
+                        x="250"
+                        y="305">
+                        b⁽¹⁾₂
+                    </text>
+
+                </g>
+
+                <g class="neuron-group output-neuron">
+
+                    <circle class="neuron"
+                            cx="400"
+                            cy="200"
+                            r="25"/>
+
+                    <text class="neuron-text"
+                        x="400"
+                        y="206">
+                        ŷ
+                    </text>
+
+                    <text class="bias-label"
+                        x="400"
+                        y="155">
+                        b⁽²⁾₁
+                    </text>
+
+                </g>
+
 
             </svg>
 
         </div>
-
-    </section>
-
+</section>
 
     <!-- GSAP -->
 
