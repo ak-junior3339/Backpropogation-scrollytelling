@@ -12,20 +12,29 @@
 
 <body>
 
+    <!-- ================================================= -->
     <!-- INTRODUCTION -->
+    <!-- ================================================= -->
+
     <section class="intro">
 
         <h1>Backpropagation</h1>
 
         <p>
-            Backpropagation is a machine learning technique essential to the optimization of artificial neural networks. 
+            Backpropagation is a machine learning technique essential
+            to the optimization of artificial neural networks.
         </p>
+
         <p>
-            It facilitates the use of gradient descent algorithms to update network weights which is how 
+            It facilitates the use of gradient descent algorithms
+            to update network weights which is how
         </p>
+
         <p>
-           the deep learning models driving modern artificial intelligence (AI) “learn”.
+            the deep learning models driving modern artificial
+            intelligence (AI) “learn”.
         </p>
+
         <p id="scrollinfo">
             Please Scroll Down ↓
         </p>
@@ -33,28 +42,135 @@
     </section>
 
 
-    <!-- PAGE-1 -->
-    <section class="step">
+    <!-- ================================================= -->
+    <!-- EXPERIENCE -->
+    <!-- ================================================= -->
 
-        <div class="text">
+    <section class="experience">
 
-            <h2>
-                Simple Neural Network
-            </h2>
+        <div class="content">
 
-            <p>
-                On the right hand of the screen you can see a simple neural network 
-                with a input layer having 2 nodes, 1 hidden layer having 2 nodes and 
-                an output layer having a single node.
-                Nodes in neighboring layers are connected with weights 𝑤𝑖𝑗.
-                There are total of 9 trainable parameters.
-            </p>
+
+            <!-- ================================================= -->
+            <!-- STEP 1 : NEURAL NETWORK -->
+            <!-- ================================================= -->
+
+            <section class="step network-step">
+
+                <div class="text">
+
+                    <h2>
+                        Simple Neural Network
+                    </h2>
+
+                    <p>
+                        On the right hand of the screen you can see
+                        a simple neural network with an input layer
+                        having 2 nodes, 1 hidden layer having 2 nodes
+                        and an output layer having a single node.
+                    </p>
+
+                    <p>
+                        Nodes in neighboring layers are connected
+                        with weights 𝑤ᵢⱼ.
+                    </p>
+
+                    <p>
+                        There are a total of 9 trainable parameters.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================================================= -->
+            <!-- STEP 2 : ACTIVATION FUNCTION -->
+            <!-- ================================================= -->
+
+            <section class="step">
+
+                <div class="text">
+
+                    <h2>
+                        Activation Function
+                    </h2>
+
+                    <p>
+                        Each neuron first calculates a weighted sum
+                        of its inputs and adds a bias.
+                    </p>
+
+                    <p>
+                        An activation function is then applied to
+                        introduce non-linearity into the network.
+                    </p>
+
+                    <p>
+                        𝑓(𝑥) has to be a non-linear function,
+                        otherwise the neural network will only be
+                        able to learn linear models.
+                    </p>
+
+                    <p class="equation">
+                        example : Sigmoid Function
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================================================= -->
+            <!-- STEP 3 : LOSS FUNCTION -->
+            <!-- ================================================= -->
+
+            <section class="step">
+
+                <div class="text">
+
+                    <h2>
+                        Loss Function
+                    </h2>
+
+                    <p>
+                        After forward propagation, the network produces a
+                        prediction.
+                    </p>
+
+                    <p>
+                        We compare this prediction with the actual target
+                        to measure how wrong the network is.
+                    </p>
+
+                    <p>
+                        This difference is measured using a
+                        <strong>loss function</strong>.
+                    </p>
+
+                    <p class="equation">
+                        example : L = (y - ŷ)². [MSE]
+                    </p>
+
+                    <p>
+                        A smaller loss means the prediction is closer to
+                        the actual value.
+                    </p>
+
+                </div>
+
+            </section>
 
         </div>
 
+
+        <!-- ================================================= -->
+        <!-- RIGHT SIDE : ONE REUSABLE SVG -->
+        <!-- ================================================= -->
+
         <div class="network">
 
-            <svg viewBox="0 0 500 400">
+            <svg id="neuralNetwork" viewBox="0 0 500 400">
 
                 <g class="weight-group w11">
 
@@ -112,7 +228,6 @@
 
                 </g>
 
-                <!-- z1 → output -->
                 <g class="weight-group w211">
 
                     <line class="connection"
@@ -127,8 +242,6 @@
 
                 </g>
 
-
-                <!-- z2 → output -->
                 <g class="weight-group w212">
 
                     <line class="connection"
@@ -143,98 +256,141 @@
 
                 </g>
 
-                <g class="neuron-group input-neuron-1">
-
-                    <circle class="neuron"
-                            cx="100"
-                            cy="100"
-                            r="25"/>
-
-                    <text class="neuron-text"
-                        x="100"
-                        y="106">
-                        x₁
-                    </text>
-
-                </g>
 
 
-                <g class="neuron-group input-neuron-2">
+                <!-- ================================================= -->
+                <!-- INPUT LAYER -->
+                <!-- ================================================= -->
 
-                    <circle class="neuron"
-                            cx="100"
-                            cy="300"
-                            r="25"/>
+                <g class="layer input-layer">
 
-                    <text class="neuron-text"
-                        x="100"
-                        y="306">
-                        x₂
-                    </text>
 
-                </g>
+                    <!-- INPUT NEURON 1 -->
 
-                <g class="neuron-group hidden-neuron-1">
+                    <g class="neuron-group input-neuron-1">
 
-                    <circle class="neuron"
-                            cx="250"
-                            cy="150"
-                            r="25"/>
+                        <circle class="neuron"
+                                cx="100"
+                                cy="100"
+                                r="25"/>
 
-                    <text class="neuron-text"
-                        x="250"
-                        y="156">
-                        z₁
-                    </text>
+                        <text class="neuron-text"
+                            x="100"
+                            y="106">
+                            x₁
+                        </text>
 
-                    <text class="bias-label"
-                        x="250"
-                        y="105">
-                        b⁽¹⁾₁
-                    </text>
+                    </g>
+
+
+                    <!-- INPUT NEURON 2 -->
+
+                    <g class="neuron-group input-neuron-2">
+
+                        <circle class="neuron"
+                                cx="100"
+                                cy="300"
+                                r="25"/>
+
+                        <text class="neuron-text"
+                            x="100"
+                            y="306">
+                            x₂
+                        </text>
+
+                    </g>
 
                 </g>
 
 
-                <g class="neuron-group hidden-neuron-2">
 
-                    <circle class="neuron"
-                            cx="250"
-                            cy="250"
-                            r="25"/>
+                <!-- ================================================= -->
+                <!-- HIDDEN LAYER -->
+                <!-- ================================================= -->
 
-                    <text class="neuron-text"
-                        x="250"
-                        y="256">
-                        z₂
-                    </text>
+                <g class="layer hidden-layer">
 
-                    <text class="bias-label"
-                        x="250"
-                        y="305">
-                        b⁽¹⁾₂
-                    </text>
+
+                    <!-- HIDDEN NEURON 1 -->
+
+                    <g class="neuron-group hidden-neuron-1">
+
+                        <circle class="neuron"
+                                cx="250"
+                                cy="150"
+                                r="25"/>
+
+                        <text class="neuron-text"
+                            x="250"
+                            y="156">
+                            z₁
+                        </text>
+
+                        <text class="bias-label"
+                            x="250"
+                            y="105">
+                            b⁽¹⁾₁
+                        </text>
+
+                    </g>
+
+
+                    <!-- HIDDEN NEURON 2 -->
+
+                    <g class="neuron-group hidden-neuron-2">
+
+                        <circle class="neuron"
+                                cx="250"
+                                cy="250"
+                                r="25"/>
+
+                        <text class="neuron-text"
+                            x="250"
+                            y="256">
+                            z₂
+                        </text>
+
+                        <text class="bias-label"
+                            x="250"
+                            y="305">
+                            b⁽¹⁾₂
+                        </text>
+
+                    </g>
 
                 </g>
 
-                <g class="neuron-group output-neuron">
 
-                    <circle class="neuron"
-                            cx="400"
-                            cy="200"
-                            r="25"/>
 
-                    <text class="neuron-text"
-                        x="400"
-                        y="206">
-                        ŷ
-                    </text>
+                <!-- ================================================= -->
+                <!-- OUTPUT LAYER -->
+                <!-- ================================================= -->
 
-                    <text class="bias-label"
-                        x="400"
-                        y="155">
-                        b⁽²⁾₁
-                    </text>
+                <g class="layer output-layer">
+
+
+                    <!-- OUTPUT NEURON -->
+
+                    <g class="neuron-group output-neuron">
+
+                        <circle class="neuron"
+                                cx="400"
+                                cy="200"
+                                r="25"/>
+
+                        <text class="neuron-text"
+                            x="400"
+                            y="206">
+                            ŷ
+                        </text>
+
+                        <text class="bias-label"
+                            x="400"
+                            y="155">
+                            b⁽²⁾₁
+                        </text>
+
+                    </g>
 
                 </g>
 
@@ -242,9 +398,14 @@
             </svg>
 
         </div>
-</section>
 
+    </section>
+
+
+
+    <!-- ================================================= -->
     <!-- GSAP -->
+    <!-- ================================================= -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
