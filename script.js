@@ -240,6 +240,13 @@ lossTl.to(".loss-visual", {
 
 });
 
+const inputBlink = gsap.to(".input-layer .neuron", {
+    stroke: "#00ff88",
+    duration: 0.5,
+    repeat: -1,
+    yoyo: true,
+    paused: true
+});
 
 const forward1Tl = gsap.timeline({
 
@@ -269,18 +276,51 @@ forward1Tl.to(
         stagger: 0.05
     }
 );
-forward1Tl.to(".input-layer .neuron", {
+forward1Tl.call(() => {
+    inputBlink.play();
+});
 
-    stroke: "#00ff88",
-    repeat: -1,
-    duration: 0.5
+
+const z1Blink = gsap.to(
+    [
+        ".input-neuron-1 .neuron-text",
+        ".input-neuron-2 .neuron-text",
+        ".w11 .weight-label",
+        ".w12 .weight-label",
+        ".hidden-neuron-1 .neuron-text",
+        ".hidden-neuron-1 .bias-label"
+    ],
+    {
+        fill: "#00ff88",
+        duration: 0.5,
+        repeat: -1,
+        yoyo: true,
+        paused: true
+    }
+);
+const forward2Tl = gsap.timeline({
+
+    scrollTrigger: {
+
+        trigger: ".forwardTwo",
+
+        start: "top center",
+
+        toggleActions: "play none none reverse"
+
+    }
 
 });
 
-forward1Tl.to(".input-layer .neuron", {
+forward2Tl.call(() => {
+    inputBlink.pause();
+});
 
-    stroke: "#ffffff",
-    repeat: -1,
-    duration: 0.5
 
+forward2Tl.set(".input-layer .neuron", {
+    stroke: "#ffffff"
+});
+
+forward2Tl.call(() => {
+    z1Blink.play();
 });
