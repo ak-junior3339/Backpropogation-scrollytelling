@@ -239,3 +239,48 @@ lossTl.to(".loss-visual", {
     duration: 0.7
 
 });
+
+
+const forward1Tl = gsap.timeline({
+
+    scrollTrigger: {
+
+        trigger: ".forwardOne",
+
+        start: "top center",
+
+        toggleActions: "play none none reverse"
+
+    }
+
+});
+forward1Tl.to(".loss-visual", {
+
+    opacity: 0,
+
+    duration: 0.7
+
+});
+forward1Tl.to(
+    ".layer, .connection, .weight-label",
+    {
+        opacity: 1,
+        duration: 0.5,
+        stagger: 0.05
+    }
+);
+forward1Tl.to(".input-layer .neuron", {
+
+    stroke: "#00ff88",
+    repeat: -1,
+    duration: 0.5
+
+});
+
+forward1Tl.to(".input-layer .neuron", {
+
+    stroke: "#ffffff",
+    repeat: -1,
+    duration: 0.5
+
+});
