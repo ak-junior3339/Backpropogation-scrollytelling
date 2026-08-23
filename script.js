@@ -396,12 +396,12 @@ const z3Blink = gsap.to(
         immediateRender: false
     }
 );
-z3Blink.pause();
+
 const forward4Tl = gsap.timeline({
 
     scrollTrigger: {
 
-        trigger: ".forwardfour",
+        trigger: ".forwardFour",
 
         start: "top center",
 
