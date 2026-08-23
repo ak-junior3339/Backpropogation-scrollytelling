@@ -386,6 +386,7 @@ const z3Blink = gsap.to(
         ".w212 .weight-label",
         ".output-layer .neuron-text",
         ".output-layer .bias-label"
+
     ],
     {
         fill: "#00ff88",
