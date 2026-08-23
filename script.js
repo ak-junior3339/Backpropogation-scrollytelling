@@ -324,3 +324,56 @@ forward2Tl.set(".input-layer .neuron", {
 forward2Tl.call(() => {
     z1Blink.play();
 });
+
+const z2Blink = gsap.to(
+    [
+        ".input-neuron-1 .neuron-text",
+        ".input-neuron-2 .neuron-text",
+        ".w21 .weight-label",
+        ".w22 .weight-label",
+        ".hidden-neuron-2 .neuron-text",
+        ".hidden-neuron-2 .bias-label"
+    ],
+    {
+        fill: "#00ff88",
+        duration: 0.5,
+        repeat: -1,
+        yoyo: true,
+        paused: true
+    }
+);
+const forward3Tl = gsap.timeline({
+
+    scrollTrigger: {
+
+        trigger: ".forwardThree",
+
+        start: "top center",
+
+        toggleActions: "play none none reverse"
+
+    }
+
+});
+forward3Tl.call(() => {
+    z1Blink.pause();
+
+    gsap.set(
+        [
+            ".input-neuron-1 .neuron-text",
+            ".input-neuron-2 .neuron-text",
+            ".w21 .weight-label",
+            ".w22 .weight-label",
+            ".w11 .weight-label",
+            ".w12 .weight-label",
+            ".hidden-neuron-1 .neuron-text",
+            ".hidden-neuron-1 .bias-label"
+        ],
+        {
+            fill: "#ffffff"
+        }
+    );
+});
+forward3Tl.call(() => {
+    z2Blink.play();
+});
