@@ -389,7 +389,7 @@ const z3Blink = gsap.to(
 
     ],
     {
-        fill: "#00ff88",
+        fill: "#a9ff1f",
         duration: 0.5,
         repeat: -1,
         yoyo: true,
