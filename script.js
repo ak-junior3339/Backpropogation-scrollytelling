@@ -599,3 +599,53 @@ backward2Tl.call(() => {
 backward2Tl.call(() => {
     back2Blink.play();
 });
+
+const back3Blink = gsap.to(
+    [
+       
+        ".w11 .weight-label",
+        ".w12 .weight-label",
+        ".w21 .weight-label",
+        ".w22 .weight-label",
+        ".hidden-neuron-2 .bias-label",
+        ".hidden-neuron-1 .bias-label"
+    ],
+    {
+        fill: "#f8f000",
+        duration: 0.1,
+        repeat: -1,
+        yoyo: true,
+        paused: true,
+        immediateRender: false
+    }
+);
+const backward3Tl = gsap.timeline({
+
+    scrollTrigger: {
+
+        trigger: ".backThree",
+
+        start: "top center",
+
+        toggleActions: "play none none reverse",
+
+    }
+
+});
+backward3Tl.call(() => {
+    back2Blink.pause();
+
+    gsap.set(
+        [
+            ".w211 .weight-label",
+            ".w212 .weight-label",
+            ".output-layer .bias-label"
+        ],
+        {
+            fill: "#ffffff"
+        }
+    );
+});
+backward3Tl.call(() => {
+    back3Blink.play();
+});
