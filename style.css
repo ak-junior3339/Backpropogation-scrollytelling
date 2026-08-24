@@ -264,3 +264,6 @@ body {
     stroke: white;
     stroke-width: 2;
 }
+.y{
+    opacity: 0;
+}
