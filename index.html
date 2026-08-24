@@ -252,6 +252,25 @@
                     </p>           
                 </div>
             </section>
+            section class="step backThree">
+                <div class="text">
+                    <h2>Backward Propogation</h2>
+                    <p>
+                        Now first for the output layer we have to calculate 𝑊new and 𝐵new for 
+                        w⁽¹⁾₁₁,w⁽¹⁾₁₂ b⁽¹⁾₁,w⁽¹⁾₂₁, w⁽¹⁾₂₂, b⁽¹⁾₂
+
+                    </p>
+                    <p>
+                        The formula will be :  
+                        w⁽¹⁾₁₁new = w⁽¹⁾₁₁old − (𝛼 × 𝜕Loss/𝜕w⁽¹⁾₁₁),
+                        w⁽¹⁾₁₂new = w⁽¹⁾₁₂old − (𝛼 × 𝜕Loss/𝜕w⁽¹⁾₁₂),
+                        b⁽¹⁾₁new = b⁽¹⁾₁old − (𝛼 × 𝜕Loss/𝜕b⁽¹⁾₁),
+                        w⁽¹⁾₂₁new = w⁽¹⁾₂₁old − (𝛼 × 𝜕Loss/𝜕w⁽¹⁾₂₁),
+                        w⁽¹⁾₂₂new = w⁽¹⁾₂₂old − (𝛼 × 𝜕Loss/𝜕w⁽¹⁾₂₂),
+                        b⁽¹⁾₂new = b⁽¹⁾₂old − (𝛼 × 𝜕Loss/𝜕b⁽¹⁾₂)
+                    </p>           
+                </div>
+            </section>
         </div>
 
 
