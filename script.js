@@ -442,7 +442,7 @@ const losslink = gsap.to(
 
     ],
     {
-        fill: "#a9ff1f",
+        fill: "#00ff88",
         duration: 0.5,
         repeat: -1,
         yoyo: true,
