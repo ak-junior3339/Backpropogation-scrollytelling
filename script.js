@@ -433,3 +433,58 @@ forward4Tl.call(() => {
 forward4Tl.call(() => {
     z3Blink.play();
 });
+
+const losslink = gsap.to(
+    [
+       ".y .neuron-text",
+        ".output-layer .neuron-text",
+    
+
+    ],
+    {
+        fill: "#a9ff1f",
+        duration: 0.5,
+        repeat: -1,
+        yoyo: true,
+        paused: true,
+        immediateRender: false
+    }
+);
+
+const loss = gsap.timeline({
+
+    scrollTrigger: {
+
+        trigger: ".loss",
+
+        start: "top center",
+
+        toggleActions: "play none none reverse",
+
+    }
+
+});
+loss.call(() => {
+    z3Blink.pause();
+
+    gsap.set(
+        [
+            ".hidden-neuron-1 .neuron-text",
+            ".hidden-neuron-2 .neuron-text",
+            ".w211 .weight-label",
+            ".w212 .weight-label",
+            ".output-layer .neuron-text",
+            ".output-layer .bias-label"
+        ],
+        {
+            fill: "#ffffff"
+        }
+    );
+});
+loss.to(".y",{
+    opacity:1,
+    duration:0.5
+});
+loss.call(() => {
+    losslink.play();
+});
