@@ -545,3 +545,57 @@ backward1Tl.call(() => {
 backward1Tl.call(() => {
     back1Blink.play();
 });
+
+
+const back2Blink = gsap.to(
+    [
+       
+        ".w211 .weight-label",
+        ".w212 .weight-label",
+        ".output-layer .bias-label"
+    ],
+    {
+        fill: "#f8f000",
+        duration: 0.1,
+        repeat: -1,
+        yoyo: true,
+        paused: true,
+        immediateRender: false
+    }
+);
+const backward2Tl = gsap.timeline({
+
+    scrollTrigger: {
+
+        trigger: ".backTwo",
+
+        start: "top center",
+
+        toggleActions: "play none none reverse",
+
+    }
+
+});
+backward2Tl.call(() => {
+    back1Blink.pause();
+
+    gsap.set(
+        [
+            ".w21 .weight-label",
+            ".w22 .weight-label",
+            ".w11 .weight-label",
+            ".w12 .weight-label",
+            ".w211 .weight-label",
+            ".w212 .weight-label",
+            ".hidden-neuron-2 .bias-label",
+            ".hidden-neuron-1 .bias-label",
+            ".output-layer .bias-label"
+        ],
+        {
+            fill: "#ffffff"
+        }
+    );
+});
+backward2Tl.call(() => {
+    back2Blink.play();
+});
