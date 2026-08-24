@@ -488,3 +488,60 @@ loss.to(".y",{
 loss.call(() => {
     losslink.play();
 });
+
+const back1Blink = gsap.to(
+    [
+       ".w21 .weight-label",
+        ".w22 .weight-label",
+        ".w11 .weight-label",
+        ".w12 .weight-label",
+        ".w211 .weight-label",
+        ".w212 .weight-label",
+        ".hidden-neuron-2 .bias-label",
+        ".hidden-neuron-1 .bias-label",
+        ".output-layer .bias-label"
+    ],
+    {
+        fill: "#f8f000",
+        duration: 0.1,
+        repeat: -1,
+        yoyo: true,
+        paused: true,
+        immediateRender: false
+    }
+);
+const backward1Tl = gsap.timeline({
+
+    scrollTrigger: {
+
+        trigger: ".backOne",
+
+        start: "top center",
+
+        toggleActions: "play none none reverse",
+
+    }
+
+});
+backward1Tl.to(".y", {
+
+    opacity: 0,
+
+    duration: 0.5
+
+});
+backward1Tl.call(() => {
+    losslink.pause();
+
+    gsap.set(
+        [
+            ".output-layer .neuron-text"
+        ],
+        {
+            fill: "#ffffff"
+        }
+    );
+});
+backward1Tl.call(() => {
+    back1Blink.play();
+});
